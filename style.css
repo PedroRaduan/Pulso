@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    font-family: 'Roboto';
+}
+
+body{
+    align-items: center;
+    justify-content: center;
+    background-color: lightskyblue;
+}
+
+.titulo{
+    font-size: 3rem;
+}
+
+#texto_mudar{
+    border-width: 2px;
+    border-style: solid;
+    border-color: white;
+    border-radius: 5px;
+    width: 35%;
+    height: 25vh;
+    font-weight: 800;
+}
+
+.subtitulo{
+    font-size: 1.5rem;
+}
+
+canvas{
+    text-align: center;
+}
