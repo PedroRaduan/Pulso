@@ -1,37 +1,47 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@600&family=Roboto&display=swap');
 
 *{
-    margin: 0;
-    box-sizing: border-box;
-    padding: 0;
     font-family: 'Roboto';
+    color: white;
 }
 
 body{
-    align-items: center;
-    justify-content: center;
-    background-color: lightskyblue;
+    background-size: cover;
 }
 
-.titulo{
-    font-size: 3rem;
+.reading{
+    font-size: 2.5rem;
+    width: 100vw;
+    margin: 0;
 }
 
-#texto_mudar{
-    border-width: 2px;
-    border-style: solid;
-    border-color: white;
-    border-radius: 5px;
-    width: 35%;
-    height: 25vh;
-    font-weight: 800;
+.ola{
+    color: black;
+    font-weight: 700;
+    font-size: 2rem;
 }
 
-.subtitulo{
-    font-size: 1.5rem;
+.volume{
+    float: right;
+    margin: 0;
+    padding: 0;
 }
 
-canvas{
+
+.gifs{
+    width: 200px;
+    border-radius: 100px;
+}
+
+
+.velocidade{
+    float: left;
+    margin: 0;
+    padding: 0;
     text-align: center;
+}
+
+
+.e{
+    font-size: 2rem;
 }
