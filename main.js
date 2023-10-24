@@ -31,6 +31,7 @@ function modelo_carregado(){
     console.log('Carreguei');
 }
 
+
 function gotPoses(results){
     console.log(results);
     if(results.length > 0){
@@ -38,22 +39,24 @@ function gotPoses(results){
     y_esq = results[0].pose.leftWrist.y;
     x_dir = results[0].pose.rightWrist.x;
     y_dir = results[0].pose.rightWrist.y;
-    score_esq = results[0].pose.keypoints[10].score;
-    score_dir = results[0].pose.keypoints[9].score;
+    score_esq = results[0].pose.keypoints[9].score;
+    score_dir = results[0].pose.keypoints[10].score;
     console.log('X Esquerdo: ' + floor(x_esq) + ' Y esquerdo: ' + floor(y_esq) + ' X direito: ' + floor(x_dir) + ' Y direito: ' + floor(y_dir));
     
 }
 }
+
 function draw(){
     image(video, 0, 0, 900, 600);
     if(score_esq > 0.2){
         fill('blue');
         braco_esq = Number(y_esq);
         bo_esquerdo = floor(braco_esq)
-        braco_esquerdo = bo_esquerdo / 500;
+        braco_esquerdo = bo_esquerdo/500;
         console.log(braco_esquerdo);
         // musica.setVolume(braco_esquerdo);
         document.getElementById('volume').innerHTML = 'O volume é ' + braco_esquerdo;
         circle(x_esq, y_esq, 30);
+        musica.setVolume(braco_esquerdo);
     }
 }
