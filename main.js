@@ -48,7 +48,7 @@ function gotPoses(results){
 
 function draw(){
     image(video, 0, 0, 900, 600);
-    if(score_esq > 0.2){
+    if(score_esq > 0.05){
         fill('blue');
         braco_esq = Number(y_esq);
         bo_esquerdo = floor(braco_esq)
@@ -58,5 +58,36 @@ function draw(){
         document.getElementById('volume').innerHTML = 'O volume é ' + braco_esquerdo;
         circle(x_esq, y_esq, 30);
         musica.setVolume(braco_esquerdo);
+    }
+
+    if(score_esq > 0.05){
+        circle(x_dir, y_dir, 30);
+        rate = 0;
+        if(y_dir > 100 && y_dir <= 200){
+            musica.rate(0.5);
+            rate = 0.5;
+            document.getElementById('velocidade').innerHTML = 'Velocidade = ' + rate;
+        }
+        else if(y_dir > 200 && y_dir <= 300){
+            musica.rate(1);
+            rate = 1;
+            document.getElementById('velocidade').innerHTML = 'Velocidade = ' + rate;
+        }
+        else if(y_dir > 300 && y_dir <= 400){
+            musica.rate(1.5);
+            rate = 1.5;
+            document.getElementById('velocidade').innerHTML = 'Velocidade = ' + rate;
+        }       
+        else if(y_dir > 400 && y_dir <= 500){
+            musica.rate(2);
+            rate = 2;
+            document.getElementById('velocidade').innerHTML = 'Velocidade = ' + rate;
+        }
+        else if(y_dir > 500 && y_dir <= 600){
+            musica.rate(2.5);
+            rate = 2.5
+            document.getElementById('velocidade').innerHTML = 'Velocidade = ' + rate;
+        }
+        
     }
 }
